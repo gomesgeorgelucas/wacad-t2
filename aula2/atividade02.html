@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lang="pt-br">Formulário de Contato</title>
+</head>
+
+<body>
+    <h1 lang="pt-br">Formulário de Contato</h1>
+
+    <form method="POST" action="/contact">
+        <fieldset>
+            <legend lang="pt-br">Dados complementares</legend>
+            <label lang="pt-br" for="corFavorita">Cor favorita</label>
+            <input id="corFavorita" name="corFavorita" type="color"><br>
+            <label lang="pt-br" for="dataNascimento">Data de nascimento</label>
+            <input id="dataNascimento" name="dataNascimento" type="date" required><br>
+            <label lang="pt-br" for="noDeIngressoIcomp">Ano de entrada em seu curso do IComp</label>
+            <input id="anoDeIngressoIcomp" required name="anoDeIngressoIcomp" type="number" placeholder="2020"><br>
+            <label lang="pt-br" for="notaSite">Nota para este site</label>
+            <input id="notaSite" name="notaSite" type="range" min="0" max="10" step="1" value="0">
+        </fieldset>
+    </form>
+</body>
+
+</html>
