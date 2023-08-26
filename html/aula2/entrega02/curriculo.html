@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title lang="pt-br">Cadastro de Currículo</title>
+</head>
+
+<body>
+  <h1 lang="pt-br">Cadastro de Currículo</h1>
+  <form action="/resume" method="post">
+    <fieldset>
+      <legend lang="pt-br">Informações Pessoais</legend>
+      <label lang="pt-br" for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required><br>
+      <label lang="pt-br" for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Digite o seu email" required><br>
+      <label lang="pt-br" for="dtnasc">Data de Nascimento:</label>
+      <input type="date" name="dtnasc" id="dtnasc" required><br>
+      <label lang="pt-br" for="altura">Altura(<sub>cm</sub>):</label>
+      <input type="number" name="altura" id="altura"><br>
+      <label lang="pt-br" for="site">Site:</label>
+      <input type="url" name="site" id="site" placeholder="Facebook, Linkedin, Github"><br>
+      <label lang="pt-br" for="civil">Estado Civil:</label>
+      <select name="civil" id="civil" lang="pt-br" required>
+        <option lang="pt-br" selected disabled value>Selecione</option>
+        <option lang="pt-br">Casado</option>
+        <option lang="pt-br">Divorciado</option>
+        <option lang="pt-br">Separado</option>
+        <option lang="pt-br">Solteiro</option>
+        <option lang="pt-br">Viúvo</option>
+      </select><br>
+      <label lang="pt-br">Sexo:</label>
+      <input type="radio" name="sex" id="masc" required>
+      <label lang="pt-br" for="masc">Masculino</label>
+      <input type="radio" name="sex" id="femi" required>
+      <label lang="pt-br" for="femi">Feminino</label>
+
+    </fieldset>
+    <fieldset>
+      <legend lang="pt-br">Endereço</legend>
+      <label lang="pt-br" for="cep">CEP:</label>
+      <input type="text" name="cep" id="cep" minlength="9" maxlength="9"><br>
+      <label lang="pt-br" for="ende">Endereço:</label>
+      <input type="text" name="ende" id="ende"><br>
+    </fieldset>
+    <fieldset>
+      <legend lang="pt-br">Contato</legend>
+      <label lang="pt-br" for="tel">Telefone:</label>
+      <input type="text" name="tel" id="tel"><br>
+      <label lang="pt-br" for="cel">Celular:</label>
+      <input type="text" name="cel" id="cel" maxlength="22"><br>
+    </fieldset>
+    <fieldset>
+      <legend lang="pt-br">Conhecimentos</legend>
+      <input type="checkbox" name="html" id="html">
+      <label lang="pt-br" for="html">HTML</label>
+      <input type="checkbox" name="css" id="css">
+      <label lang="pt-br" for="css">CSS</label>
+      <input type="checkbox" name="js" id="js">
+      <label lang="pt-br" for="js">JavaScript</label><br>
+      <label lang="pt-br" for="more">Mais conhecimentos</label>
+      <textarea lang="pt-br" id="more" name="more" rows="10" placeholder="Digite os seus conhecimentos"></textarea>
+    </fieldset>
+    <input type="submit" value="Enviar"><br>
+  </form>
+</body>
+
+</html>

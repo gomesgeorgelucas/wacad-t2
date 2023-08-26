@@ -1,0 +1,21 @@
+div {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+}
+
+.div1 {
+  background-color: rgb(239, 116, 111);
+}
+
+.div2 {
+  background-color: #ecf081;
+}
+
+.div3 {
+  background-color: mediumseagreen;
+}
+
+.div4 {
+  background-color: rgb(171, 62, 91);
+}
