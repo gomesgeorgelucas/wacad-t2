@@ -1,0 +1,45 @@
+header {
+  background-color: yellow;
+  text-align: center;
+}
+
+header h1 {
+  padding: 2px;
+}
+
+nav {
+  float: left;
+  width: 200px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+article .date {
+  font-weight: bold;
+}
+
+main {
+  display: inline-block;
+  border-left: 2px solid green;
+  padding: 0 8px;
+}
+
+aside {
+  float: right;
+  border: 2px dashed green;
+  width: 200px;
+  text-align: end;
+  padding: 0 8px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+}

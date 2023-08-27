@@ -1,0 +1,34 @@
+.base {
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 15px 40px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 8px;
+  font-family: "Robot", sans-serif;
+  font-weight: 400;
+  box-shadow: inset 0 -10px 20px -1px rgba(0, 0, 0, 0.17);
+}
+.base.login {
+  background-color: #2979ff;
+  color: #ffffff;
+}
+
+.base.register {
+  background-color: #cccccc;
+  color: #000000;
+}
+
+.base.moodle {
+  background-color: #f6de1e;
+  color: #ffffff;
+}
+
+.base.moodle span {
+  font-family: "Comic Sans MS";
+  vertical-align: middle;
+  font-size: 3em;
+  padding-right: 14.4px;
+  border-right: 4px solid rgba(255, 255, 255, 0.5);
+  margin-right: 0.3em;
+}
