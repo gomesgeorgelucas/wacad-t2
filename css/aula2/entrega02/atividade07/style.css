@@ -21,6 +21,7 @@ body {
   background: rgb(243, 186, 167);
 }
 .content {
+  padding: 16px 8px;
   background: rgb(243, 186, 167);
 }
 .button-container {

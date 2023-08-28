@@ -6,40 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Border in the Table</title>
+  <style>
+    table {
+      background-color: chocolate;
+      color: gold;
+      text-align: center;
+      border: 10px solid khaki;
+      border-style: inset;
+    }
+
+    th {
+      width: 500px;
+      font-size: 20pt;
+      border-bottom: 1px solid gold;
+    }
+
+    td {
+      font-size: 14pt;
+      font-weight: 600;
+    }
+
+    td:first-child:first-letter {
+      font-size: 32pt;
+      font-family: Arial, Helvetica, sans-serif;
+      color: gold;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
-<style>
-  table {
-    background-color: chocolate;
-    color: gold;
-    text-align: center;
-    border: 10px solid khaki;
-    border-style: inset;
-  }
-
-  th {
-    width: 500px;
-    font-size: 20pt;
-    border-bottom: 1px solid gold;
-  }
-
-  td {
-    font-size: 14pt;
-    font-weight: 600;
-  }
-
-  td:first-child:first-letter {
-    font-size: 32pt;
-    font-family: Arial, Helvetica, sans-serif;
-    color: gold;
-    font-weight: bold;
-  }
-</style>
 
 <body>
   <table>
     <tr>
-      <th>Descricação do Produto</th>
+      <th>Descrição do Produto</th>
       <th>Preço do Produto</th>
     </tr>
     <tr>
