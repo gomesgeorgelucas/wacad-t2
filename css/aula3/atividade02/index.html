@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 02 Grid</title>
+  <style>
+    .body {
+      width: 90%;
+      max-width: 900px;
+      margin: 2em auto;
+      font: Arial, Helvetica, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+    }
+
+    header,
+    footer {
+      display: grid;
+      border: 2px solid rgb(79, 185, 227);
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(207, 232, 220);
+    }
+
+    header {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    article {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+
+    aside {
+      border-right: 1px solid #999;
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    footer {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header> Este é meu site em Grid Layout </header>
+    <article>
+      <h1> Meu artigo </h1>
+      <p> Cole qualquer texto aqui ... </p>
+      <p> Cole qualquer texto aqui ... </p>
+    </article>
+    <aside>
+      <h2> Lembretes </h2>
+      <p> Cole qualquer texto aqui ... </p>
+    </aside>
+    <footer> Contato me@meusite.com </footer>
+  </div>
+
+</body>
+
+</html>

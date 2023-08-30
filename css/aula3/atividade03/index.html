@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style type="text/css">
+    .exemplo {
+      padding: 20px;
+      color: white;
+    }
+
+    @media only screen and (min-width: 320px) {
+      .exemplo {
+        background-color: green;
+      }
+    }
+
+    @media only screen and (min-width: 481px) {
+      .exemplo {
+        background-color: blue;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .exemplo {
+        background-color: rgb(21, 115, 128);
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+      .exemplo {
+        background-color: red;
+      }
+    }
+
+    @media only screen and (min-width: 1201px) {
+      .exemplo {
+        background-color: black;
+      }
+    }
+
+    @media only screen and (orientation: landscape) {
+      h2 {
+        color: blue;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2> Breakpoints Media Query </h2>
+    <p class="exemplo"> Redimensione a janela do navegador para ver como a cor de fundo deste parágrafo muda em
+      diferentes tamanhos de tela </p>
+  </div>
+</body>
+
+</html>
