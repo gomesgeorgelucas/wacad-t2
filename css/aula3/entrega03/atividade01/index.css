@@ -1,0 +1,34 @@
+nav {
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px 24px;
+  margin: 0 -2px;
+}
+
+.nav-button {
+  background-color: #f69e06;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid #ee9002;
+}
+
+.nav-button .current {
+  color: black;
+}
+
+.nav-button a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
