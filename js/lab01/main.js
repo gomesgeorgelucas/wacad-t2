@@ -2,51 +2,39 @@ const customName = document.getElementById("customname");
 const randomize = document.querySelector(".randomize");
 const story = document.querySelector(".story");
 
-const randomValueFromArray = (array) => {
-  const random = Math.floor(Math.random() * array.length);
-  return array[random];
-};
+if (!customName || !randomize || !story) {
+  throw "Erro ao carregar elementos HTML.";
+}
 
-const storyText = `It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.`;
+const randomValueFromArray = (array) =>
+  array[Math.floor(Math.random() * array.length)];
 
-const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+const storyText = `Toda vez que eu chego em casa :insertx: :inserty: tá na minha :insertz:...<br>
+Diga lá :insertk: o que você vai fazer?<br>
+Vou usar :insertl: pra me defender!`;
 
-const insertY = ["the soup kitchen", "Disneyland", "the White House"];
-
-const insertZ = [
-  "spontaneously combusted",
-  "melted into a puddle on the sidewalk",
-  "turned into a slug and crawled away",
+const insertX = ["a escada", "a bandeja", "o celular"];
+const ptInsertX = ["o fiambre", "o autocarro", "o telemóvel"];
+const insertY = ["da vizinha", "do padeiro", "do colega", "da inquilina"];
+const ptInsertY = ["da rapariga", "do gajo", "do malta", "da gaja"];
+const insertZ = ["cama", "cozinha", "janela"];
+const insertK = ["Caio", "Joana", "Juliano", "Carla"];
+const insertL = [
+  "uma raquete",
+  "uma marreta",
+  "um mata-mosquitos",
+  "um mouse",
+  "um pendrive",
 ];
 
-const result = () => {
-  let newStory = storyText;
+randomize.addEventListener("click", () => {
+  const isPT = document.getElementById("pt").checked;
 
-  const xItem = randomValueFromArray(insertX);
-  const yItem = randomValueFromArray(insertY);
-  const zItem = randomValueFromArray(insertZ);
-
-  newStory = newStory
-    .replaceAll(":insertx:", xItem)
-    .replaceAll(":inserty:", yItem)
-    .replaceAll(":insertz:", zItem);
-
-  if (customName.value !== "") {
-    const name = customName.value;
-    newStory = newStory.replaceAll("Bob", name);
-  }
-
-  if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(300 * 0.071429)} stones`;
-    const temperature = `${Math.round(((94 - 32) * 5) / 9)} centigrade`;
-
-    newStory = newStory
-      .replaceAll("300 pounds", weight)
-      .replaceAll("94 fahrenheit", temperature);
-  }
-
-  story.textContent = newStory;
+  story.innerHTML = storyText
+    .replaceAll(":insertx:", randomValueFromArray(!isPT ? insertX : ptInsertX))
+    .replaceAll(":inserty:", randomValueFromArray(!isPT ? insertY : ptInsertY))
+    .replaceAll(":insertz:", randomValueFromArray(insertZ))
+    .replaceAll(":insertk:", customName.value || randomValueFromArray(insertK))
+    .replaceAll(":insertl:", randomValueFromArray(insertL));
   story.style.visibility = "visible";
-};
-
-randomize.addEventListener("click", result);
+});
